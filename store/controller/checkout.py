@@ -110,9 +110,9 @@ def placeorder(request):
 
     payMode = request.POST.get('payment_mode')
     if (payMode == "Paid by Razorpay" or payMode == "Paid by PayPal"): 
-      return JsonResponse({'status': "Your order has been placed successfully"})
+      return JsonResponse({'status': "您的訂單已成功下達"})
     else:
-      messages.success(request,"Your order has been placed successfully")
+      messages.success(request,"您的訂單已成功下達")
   return redirect('/')
 
 @login_required(login_url='loginpage')
